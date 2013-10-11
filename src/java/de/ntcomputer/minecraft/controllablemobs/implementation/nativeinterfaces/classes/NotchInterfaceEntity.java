@@ -10,7 +10,7 @@ public class NotchInterfaceEntity {
 	public class GetEntityDistanceSquared extends NativeMethodPublic {
 		public double invoke(final Entity entity, final Entity target) {
 			try {
-				// method returns difLocX² + difLocY² + difLocZ² for entity
+				// method returns difLocX^2 + difLocY^2 + difLocZ^2 for entity
 				return entity.e(target);
 			} catch(Throwable e) {
 				this.handleException(e);
@@ -22,7 +22,7 @@ public class NotchInterfaceEntity {
 	public class GetLocationDistance extends NativeMethodPublic {
 		public double invoke(final Entity entity, final double x, final double y, final double z) {
 			try {
-				// method returns Math.sqrt( difLocX² + difLocY² + difLocZ² ) for double values
+				// method returns Math.sqrt( difLocX^2 + difLocY^2 + difLocZ^2 ) for double values
 				return entity.f(x, y, z);
 			} catch(Throwable e) {
 				this.handleException(e);
