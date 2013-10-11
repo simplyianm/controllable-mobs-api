@@ -26,7 +26,7 @@
 		<!-- Compile the java code from ${src} into ${build} -->
 		<echo message="ant.java.version: ${ant.java.version}" />
 		<javac srcdir="${src}" destdir="${build}" includeantruntime="false" optimize="true" 
-			target="1.6" source="1.6" verbose="true" />
+			target="1.6" source="1.6" />
 	</target>
 
 	<target name="dist" depends="compile" description="generate the distribution">
