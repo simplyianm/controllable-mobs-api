@@ -98,7 +98,7 @@ public abstract class AIController<E extends LivingEntity> implements Comparator
 				break;
 			}
 		}
-		((UnsafeList<Object>.Itr) iterator).valid = false;
+		((UnsafeList.Itr) iterator).valid = false;
 		
 		// remove item
 		iterator = NativeInterfaces.PATHFINDERGOALSELECTOR.FIELD_GOALITEMS.get(this.selector).iterator();
@@ -109,7 +109,7 @@ public abstract class AIController<E extends LivingEntity> implements Comparator
 				break;
 			}
 		}
-		((UnsafeList<Object>.Itr) iterator).valid = false;
+		((UnsafeList.Itr) iterator).valid = false;
 	}
 	
 	private void clearGoals() {
@@ -124,7 +124,7 @@ public abstract class AIController<E extends LivingEntity> implements Comparator
 				iterator.remove();
 			}
 		}
-		((UnsafeList<Object>.Itr) iterator).valid = false;
+		((UnsafeList.Itr) iterator).valid = false;
 		
 		// remove all non-action items
 		iterator = NativeInterfaces.PATHFINDERGOALSELECTOR.FIELD_GOALITEMS.get(this.selector).iterator();
@@ -132,7 +132,7 @@ public abstract class AIController<E extends LivingEntity> implements Comparator
 			searchGoal = NativeInterfaces.PATHFINDERGOALSELECTORITEM.FIELD_GOAL.get(iterator.next());
 			if(!this.actionGoals.contains(searchGoal) ) iterator.remove();
 		}
-		((UnsafeList<Object>.Itr) iterator).valid = false;
+		((UnsafeList.Itr) iterator).valid = false;
 	}
 	
 	private void sortGoals() {
