@@ -1,6 +1,1 @@
-/media
-/bin
-/.externalToolBuilders
-/.settings
-/archive
-/lib
+target/
